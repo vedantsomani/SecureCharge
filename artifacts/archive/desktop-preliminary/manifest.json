@@ -1,0 +1,43 @@
+{
+  "artifact_sha256": {
+    "collision-inputs/md5_collision_a.bin": "8d12236e5c4ed9f4e790db4d868fd5c399df267e18ff65c1107c328228cffc98",
+    "collision-inputs/md5_collision_b.bin": "b9fef2a8fc93b05e7701e97196fda6c4fbeea25ff8e64fdfee7015eca8fa617d",
+    "collision.json": "7c735981fd9b2c58e93a3ef050342b11952dbbdf18dd98e6550d2d8bddb1c52f",
+    "hash_latency.png": "0dcde8b8164d917846487c206e6b8fa14332ece9378243e4cd450f441e593b4d",
+    "hash_latency.svg": "691fd21bd6c166f22e5d1549b6c17027ce10c614c5d854a6b8c456869ddb889e",
+    "hash_samples.csv": "55919e717e87aeeb2894886ae01e052f12f950c9e55659719f11efc9a1e68727",
+    "pipeline_latency.png": "b535272f27a25c09d151a89d2b4a155c08f31de5d64165c122538e76a846f4d0",
+    "pipeline_latency.svg": "d5a0ee2068ddd4c231dadba1baa5ffd6db027707f5c7b003e1a49a5f6d1087bb",
+    "pipeline_samples.csv": "8899b27d30a00e6f4b125076b666aa15c4dc55bac68003404a2d50d9cabfa4ac",
+    "results.json": "ed9d06ffa0de2928516a8257bd64cafb00a31d8dd7115a1c202c567068c06ba2",
+    "RESULTS.md": "4b098f6ae70f7d161cd10faccbc3e90de5b489901fdfde8149431ab5b4242edd",
+    "scenarios.csv": "27d8cc1d7a1dc54f6028a164fe649ebe31ac0f442f182608552b06a125d31b4a"
+  },
+  "source_sha256": {
+    "securecharge/__init__.py": "213134d79becce06aef1181c13302bf2a5e12e69674ae32ee5256f59c45688d6",
+    "securecharge/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "securecharge/attacks.py": "34aebd79cafdfb944172a59a4ef9e3c7c4abee6e5fa22eeaf51d8315f549b671",
+    "securecharge/backend.py": "c239791822ac594104022766181e6b4f54b19c27e8f7fb815c303d56a7118843",
+    "securecharge/benchmark.py": "9422fd7f590d0f814fcd5a9e625dbb00170c02e9dc63a364ecbad7f6cd41b41d",
+    "securecharge/billing.py": "b2184faf6f98af51e2f5e39e4c682db18ba9b6435ccb86c0bd6b72b3609967c3",
+    "securecharge/cli.py": "c7b291191dfa3445804520acfa4c8cfe75f0354f0a38ca371d02f41e89a10f10",
+    "securecharge/clock.py": "912bca30cbbd596285cb487731378ce03d34aa19f02ecf9c7cfa8f89b053af6b",
+    "securecharge/collision.py": "8f6e384f0f1df50ae19f1ad61bed33e3e73c449206292b6ff25f747c91a27ed7",
+    "securecharge/collision_lab.py": "026429fe72881ba84c86ae1e0304a0cd009a44dfdfc4ba65ce5d1ccc3cb56b28",
+    "securecharge/crypto.py": "36949cfb629f265005c1f7802b987db7c3759eb84b1fceec8f421e677868afca",
+    "securecharge/gateway.py": "14117d509a31ed667b651d286bc060d25ed2ade45e0f1daba02cd5fffaf576a8",
+    "securecharge/keys.py": "83830957d5622b3a4a793d09c39d4b96b09c05f8ef9840b8a33adc9e4544202e",
+    "securecharge/legacy.py": "ea6475cb5015751fb78bbf6412d9747e348281364d5992c875724c3ab0ce51ed",
+    "securecharge/messages.py": "71d13ef63bbb77a66b7542329855ca220fa14b585e426a86b3df441fe905b6b6",
+    "securecharge/network.py": "f59f0f7790804db72103c9e5ac86001859202b7c77cac9ec16fd46e371ffcc57",
+    "securecharge/protocol.py": "311fad10de388593a5d0671eac02ed4a4008c34d0a9c1fdd0dddbdcf0e851ae0",
+    "securecharge/research.py": "f2259d42942ba22e55da0e9aba262d6ccc868a0de0b5d6b7c7208e6155b9b3a4",
+    "securecharge/riskanalysis.py": "584fc1c5be82bd9c4ddafce0ffc81fee7cb71dfd79a4c210a08857e0a021b934",
+    "securecharge/scenarios.py": "82725707f62dde0c0cbffef4c1498991ab0814009ca524915c30d05a99f5a8b2",
+    "securecharge/security.py": "e1a49a69b58d0db31d7b316d893a0322a68fece11137c6670ff4f959c2ddd1bc",
+    "securecharge/serialization.py": "5c42439a9e305304165f58b7d830aef62bc131a95874e8ea780698a47c992581",
+    "securecharge/storage.py": "7b1cfbc57c1ec506a93ed79c94ee7d77a8a4466a441fb91e67215a0bf7bf3753",
+    "securecharge/transport.py": "53cf7da0347294877f6e4707d70f1d08774846927416267e402ea59b611fb47f",
+    "securecharge/verdict.py": "b9d787c315135876db876e71c6354eea286e1187a68aed181837d740cd557d35"
+  }
+}

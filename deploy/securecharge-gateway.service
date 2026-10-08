@@ -1,0 +1,26 @@
+[Unit]
+Description=SecureCharge Pi retrofit gateway and custody journal
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=securecharge
+Group=securecharge
+WorkingDirectory=/opt/securecharge
+Environment=PYTHONDONTWRITEBYTECODE=1
+ExecStart=/opt/securecharge/.venv/bin/python -m securecharge serve gateway --keys /etc/securecharge/gateway.keys.json --host 127.0.0.1 --port 9001 --upstream wss://csms.example.invalid:9000 --ca /etc/securecharge/backend-ca.pem --client-cert /etc/securecharge/gateway.pem --client-key /etc/securecharge/gateway-key.pem --outbox /var/lib/securecharge/blackbox.sqlite
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+StateDirectory=securecharge
+StateDirectoryMode=0700
+ProtectSystem=strict
+ProtectHome=true
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+UMask=0077
+TimeoutStopSec=30
+
+[Install]
+WantedBy=multi-user.target

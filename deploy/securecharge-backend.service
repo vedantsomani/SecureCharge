@@ -1,0 +1,26 @@
+[Unit]
+Description=SecureCharge pilot backend adapter
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=securecharge
+Group=securecharge
+WorkingDirectory=/opt/securecharge
+Environment=PYTHONDONTWRITEBYTECODE=1
+ExecStart=/opt/securecharge/.venv/bin/python -m securecharge serve backend --keys /etc/securecharge/backend.keys.json --host 0.0.0.0 --port 9000 --database /var/lib/securecharge/backend.sqlite --cert /etc/securecharge/backend.pem --tls-key /etc/securecharge/backend-key.pem --client-ca /etc/securecharge/client-ca.pem
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+StateDirectory=securecharge
+StateDirectoryMode=0700
+ProtectSystem=strict
+ProtectHome=true
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+UMask=0077
+TimeoutStopSec=30
+
+[Install]
+WantedBy=multi-user.target

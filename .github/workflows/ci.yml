@@ -1,0 +1,28 @@
+name: SecureCharge verification
+on: [push, pull_request]
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python: ['3.11', '3.13']
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install -r requirements-dev.txt
+      - run: python -m ruff check securecharge tests scripts dashboard.py
+      - run: python -m ruff format --check securecharge tests scripts dashboard.py
+      - run: python -m pytest -q
+      - run: python -m securecharge demo
+      - run: python -m securecharge network-demo
+      - run: python -m securecharge pilot-demo --out artifacts/ci-pilot
+      - run: python -m securecharge research --out artifacts/ci --samples 20 --seed 18
+      - uses: actions/upload-artifact@v4
+        with:
+          name: research-${{ matrix.os }}-${{ matrix.python }}
+          path: |
+            artifacts/ci
+            artifacts/ci-pilot

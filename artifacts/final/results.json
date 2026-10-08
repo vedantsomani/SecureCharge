@@ -1,0 +1,515 @@
+{
+  "artifact_version": "SC2-research-1",
+  "seed": 18,
+  "environment": {
+    "measured_at_utc": "2026-10-03T02:44:13.491162+00:00",
+    "python": "3.14.7",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 204 Stepping 2, GenuineIntel",
+    "board_model": "unavailable",
+    "openssl": "OpenSSL 3.5.7 9 Jun 2026",
+    "sqlite": "3.50.4",
+    "packages": {
+      "ocpp": "2.1.0",
+      "jsonschema": "4.25.1",
+      "websockets": "15.0.1",
+      "cryptography": "48.0.1",
+      "matplotlib": "3.11.2",
+      "numpy": "2.5.3",
+      "streamlit": "1.65.0",
+      "pandas": "2.3.3",
+      "pytest": "9.1.1",
+      "hypothesis": "6.168.3",
+      "reportlab": "5.0.1",
+      "pymupdf": "1.28.2"
+    },
+    "hardware_class": "host-desktop-or-server"
+  },
+  "methods": {
+    "samples": 200,
+    "warmup": 20,
+    "hash_batch_size": 50,
+    "bootstrap_resamples": 1000,
+    "ci": "percentile bootstrap of median; not an independent-host confidence interval",
+    "pipeline_storage": "SQLite WAL file",
+    "latency_scope": "StartTransaction: modeled checksum + gateway + wire encoding + backend/DB; Stop closes outside timer",
+    "allocation_scope": "one extra start+stop; Python allocations only, not RSS or embedded flash"
+  },
+  "hash_summary": [
+    {
+      "algorithm": "MD5",
+      "size_bytes": 256,
+      "n": 200,
+      "median_ns": 686.0,
+      "p95_ns": 1106.0,
+      "p99_ns": 1862.0,
+      "median_ci95_ns": [
+        684.0,
+        693.0
+      ],
+      "min_ns": 606.0,
+      "max_ns": 2784.0
+    },
+    {
+      "algorithm": "SHA-1",
+      "size_bytes": 256,
+      "n": 200,
+      "median_ns": 516.0,
+      "p95_ns": 782.0,
+      "p99_ns": 2482.0,
+      "median_ci95_ns": [
+        512.0,
+        520.0
+      ],
+      "min_ns": 464.0,
+      "max_ns": 3696.0
+    },
+    {
+      "algorithm": "SHA-256",
+      "size_bytes": 256,
+      "n": 200,
+      "median_ns": 422.0,
+      "p95_ns": 682.0,
+      "p99_ns": 944.0,
+      "median_ci95_ns": [
+        418.0,
+        424.0
+      ],
+      "min_ns": 372.0,
+      "max_ns": 1340.0
+    },
+    {
+      "algorithm": "SHA-512",
+      "size_bytes": 256,
+      "n": 200,
+      "median_ns": 736.0,
+      "p95_ns": 1684.0,
+      "p99_ns": 2676.0,
+      "median_ci95_ns": [
+        730.0,
+        749.0
+      ],
+      "min_ns": 658.0,
+      "max_ns": 2776.0
+    },
+    {
+      "algorithm": "SHA3-256",
+      "size_bytes": 256,
+      "n": 200,
+      "median_ns": 770.0,
+      "p95_ns": 1256.0,
+      "p99_ns": 2256.0,
+      "median_ci95_ns": [
+        764.0,
+        779.0
+      ],
+      "min_ns": 680.0,
+      "max_ns": 3506.0
+    },
+    {
+      "algorithm": "HMAC-SHA-256",
+      "size_bytes": 256,
+      "n": 200,
+      "median_ns": 1408.0,
+      "p95_ns": 2318.0,
+      "p99_ns": 3698.0,
+      "median_ci95_ns": [
+        1398.0,
+        1423.0
+      ],
+      "min_ns": 1254.0,
+      "max_ns": 7248.0
+    },
+    {
+      "algorithm": "HMAC-SHA3-256",
+      "size_bytes": 256,
+      "n": 200,
+      "median_ns": 2380.0,
+      "p95_ns": 3538.0,
+      "p99_ns": 4176.0,
+      "median_ci95_ns": [
+        2354.0,
+        2448.0
+      ],
+      "min_ns": 2116.0,
+      "max_ns": 7102.0
+    },
+    {
+      "algorithm": "MD5",
+      "size_bytes": 4096,
+      "n": 200,
+      "median_ns": 5188.0,
+      "p95_ns": 7550.0,
+      "p99_ns": 12810.0,
+      "median_ci95_ns": [
+        5037.0,
+        5370.0
+      ],
+      "min_ns": 4392.0,
+      "max_ns": 13540.0
+    },
+    {
+      "algorithm": "SHA-1",
+      "size_bytes": 4096,
+      "n": 200,
+      "median_ns": 2428.0,
+      "p95_ns": 3752.0,
+      "p99_ns": 5172.0,
+      "median_ci95_ns": [
+        2409.0,
+        2464.0
+      ],
+      "min_ns": 2202.0,
+      "max_ns": 5658.0
+    },
+    {
+      "algorithm": "SHA-256",
+      "size_bytes": 4096,
+      "n": 200,
+      "median_ns": 1449.0,
+      "p95_ns": 2556.0,
+      "p99_ns": 3574.0,
+      "median_ci95_ns": [
+        1429.0,
+        1533.0
+      ],
+      "min_ns": 1288.0,
+      "max_ns": 4168.0
+    },
+    {
+      "algorithm": "SHA-512",
+      "size_bytes": 4096,
+      "n": 200,
+      "median_ns": 4731.0,
+      "p95_ns": 7416.0,
+      "p99_ns": 11362.0,
+      "median_ci95_ns": [
+        4568.0,
+        4920.0
+      ],
+      "min_ns": 4008.0,
+      "max_ns": 12688.0
+    },
+    {
+      "algorithm": "SHA3-256",
+      "size_bytes": 4096,
+      "n": 200,
+      "median_ns": 6905.0,
+      "p95_ns": 11680.0,
+      "p99_ns": 14008.0,
+      "median_ci95_ns": [
+        6740.0,
+        7274.0
+      ],
+      "min_ns": 5890.0,
+      "max_ns": 14886.0
+    },
+    {
+      "algorithm": "HMAC-SHA-256",
+      "size_bytes": 4096,
+      "n": 200,
+      "median_ns": 2548.0,
+      "p95_ns": 4556.0,
+      "p99_ns": 8012.0,
+      "median_ci95_ns": [
+        2433.0,
+        2663.0
+      ],
+      "min_ns": 2144.0,
+      "max_ns": 9158.0
+    },
+    {
+      "algorithm": "HMAC-SHA3-256",
+      "size_bytes": 4096,
+      "n": 200,
+      "median_ns": 8894.0,
+      "p95_ns": 12250.0,
+      "p99_ns": 19200.0,
+      "median_ci95_ns": [
+        8662.0,
+        9074.0
+      ],
+      "min_ns": 7222.0,
+      "max_ns": 29388.0
+    },
+    {
+      "algorithm": "MD5",
+      "size_bytes": 65536,
+      "n": 200,
+      "median_ns": 80573.0,
+      "p95_ns": 96340.0,
+      "p99_ns": 99922.0,
+      "median_ci95_ns": [
+        77779.0,
+        87201.0
+      ],
+      "min_ns": 65700.0,
+      "max_ns": 102202.0
+    },
+    {
+      "algorithm": "SHA-1",
+      "size_bytes": 65536,
+      "n": 200,
+      "median_ns": 31070.0,
+      "p95_ns": 37820.0,
+      "p99_ns": 41628.0,
+      "median_ci95_ns": [
+        29269.0,
+        32018.0
+      ],
+      "min_ns": 24650.0,
+      "max_ns": 44626.0
+    },
+    {
+      "algorithm": "SHA-256",
+      "size_bytes": 65536,
+      "n": 200,
+      "median_ns": 20563.0,
+      "p95_ns": 23786.0,
+      "p99_ns": 25628.0,
+      "median_ci95_ns": [
+        19134.0,
+        20916.0
+      ],
+      "min_ns": 15490.0,
+      "max_ns": 27942.0
+    },
+    {
+      "algorithm": "SHA-512",
+      "size_bytes": 65536,
+      "n": 200,
+      "median_ns": 74951.0,
+      "p95_ns": 83962.0,
+      "p99_ns": 89856.0,
+      "median_ci95_ns": [
+        72423.0,
+        76571.0
+      ],
+      "min_ns": 58138.0,
+      "max_ns": 198254.0
+    },
+    {
+      "algorithm": "SHA3-256",
+      "size_bytes": 65536,
+      "n": 200,
+      "median_ns": 113010.0,
+      "p95_ns": 134168.0,
+      "p99_ns": 145728.0,
+      "median_ci95_ns": [
+        106030.0,
+        117718.0
+      ],
+      "min_ns": 90408.0,
+      "max_ns": 162864.0
+    },
+    {
+      "algorithm": "HMAC-SHA-256",
+      "size_bytes": 65536,
+      "n": 200,
+      "median_ns": 22114.0,
+      "p95_ns": 27538.0,
+      "p99_ns": 30398.0,
+      "median_ci95_ns": [
+        20746.0,
+        22974.0
+      ],
+      "min_ns": 16304.0,
+      "max_ns": 31564.0
+    },
+    {
+      "algorithm": "HMAC-SHA3-256",
+      "size_bytes": 65536,
+      "n": 200,
+      "median_ns": 114245.0,
+      "p95_ns": 136910.0,
+      "p99_ns": 156668.0,
+      "median_ci95_ns": [
+        108242.0,
+        122568.0
+      ],
+      "min_ns": 91484.0,
+      "max_ns": 188562.0
+    }
+  ],
+  "pipeline_summary": {
+    "legacy_checksum_ns": {
+      "n": 200,
+      "median_ns": 45000.0,
+      "p95_ns": 67800,
+      "p99_ns": 107900,
+      "median_ci95_ns": [
+        43500.0,
+        46450.0
+      ],
+      "min_ns": 25800,
+      "max_ns": 142100
+    },
+    "gateway_ns": {
+      "n": 200,
+      "median_ns": 201650.0,
+      "p95_ns": 296300,
+      "p99_ns": 305300,
+      "median_ci95_ns": [
+        198700.0,
+        205350.0
+      ],
+      "min_ns": 122600,
+      "max_ns": 350600
+    },
+    "wire_encoding_ns": {
+      "n": 200,
+      "median_ns": 60400.0,
+      "p95_ns": 78100,
+      "p99_ns": 137200,
+      "median_ci95_ns": [
+        60050.0,
+        61000.0
+      ],
+      "min_ns": 42100,
+      "max_ns": 219800
+    },
+    "backend_ns": {
+      "n": 200,
+      "median_ns": 1458800.0,
+      "p95_ns": 1919500,
+      "p99_ns": 2395800,
+      "median_ci95_ns": [
+        1444000.0,
+        1500100.0
+      ],
+      "min_ns": 1086600,
+      "max_ns": 3230300
+    },
+    "total_ns": {
+      "n": 200,
+      "median_ns": 1795450.0,
+      "p95_ns": 2290200,
+      "p99_ns": 2712900,
+      "median_ci95_ns": [
+        1751800.0,
+        1839150.0
+      ],
+      "min_ns": 1278200,
+      "max_ns": 3476100
+    }
+  },
+  "message_overhead_bytes": 282,
+  "python_allocation_peak_bytes": 11197,
+  "collision": {
+    "model": "MVR-128 research fixture; no real vendor firmware claim",
+    "hashing_boundary": "base64-decoded 128-byte vendor meter record ONLY",
+    "pinned_md5": "79054025255fb1a26e4bc422aef54eb4",
+    "honest_meter_stop": 801813895,
+    "substituted_meter_stop": 801813767,
+    "meter_start": 801801395,
+    "honest_bill_paise": 15000,
+    "substituted_bill_paise": 14846,
+    "legacy_accepts_both": true,
+    "full_json_md5_equal": false,
+    "sha256_record_equal": false,
+    "sha3_record_equal": false,
+    "secure_substitution_reason": "BAD_TAG",
+    "honest_ocpp": [
+      2,
+      "collision-stop",
+      "StopTransaction",
+      {
+        "transactionId": 1,
+        "idTag": "RFID-1234",
+        "meterStop": 801813895,
+        "timestamp": "2026-09-21T14:28:20Z",
+        "reason": "Local",
+        "transactionData": [
+          {
+            "timestamp": "2026-09-21T14:28:20Z",
+            "sampledValue": [
+              {
+                "value": "0THdAsXm7sRpPZoGmK/5XC/KtYcSRn6rQARYPrj7f4lVrTQGCfSzAoPkiIMlcUFaCFEl6PfNyZ/ZHb3ygDc8W9iCPjFWNI9brm2s1DbJGcbdU+K0h9oD/QI5YwbSSM2g6Z8zQg9XfujOVLZwgKgNHsaYIby2qIOTlvllK2/3KnA=",
+                "format": "SignedData",
+                "measurand": "Energy.Active.Import.Register",
+                "unit": "Wh"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "substituted_ocpp": [
+      2,
+      "collision-stop",
+      "StopTransaction",
+      {
+        "transactionId": 1,
+        "idTag": "RFID-1234",
+        "meterStop": 801813767,
+        "timestamp": "2026-09-21T14:28:20Z",
+        "reason": "Local",
+        "transactionData": [
+          {
+            "timestamp": "2026-09-21T14:28:20Z",
+            "sampledValue": [
+              {
+                "value": "0THdAsXm7sRpPZoGmK/5XC/KtQcSRn6rQARYPrj7f4lVrTQGCfSzAoPkiIMl8UFaCFEl6PfNyZ/ZHb1ygDc8W9iCPjFWNI9brm2s1DbJGcbdU+I0h9oD/QI5YwbSSM2g6Z8zQg9XfujOVLZwgCgNHsaYIby2qIOTlvllq2/3KnA=",
+                "format": "SignedData",
+                "measurand": "Energy.Active.Import.Register",
+                "unit": "Wh"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "network": {
+    "transport": "actual localhost WebSockets",
+    "frontend_subprotocol": "ocpp1.6",
+    "private_subprotocol": "securecharge.sc2",
+    "tls": false,
+    "start_response": [
+      3,
+      "msg-0001",
+      {
+        "idTagInfo": {
+          "status": "Accepted"
+        },
+        "transactionId": 1
+      }
+    ],
+    "stop_response": [
+      3,
+      "msg-0002",
+      {
+        "idTagInfo": {
+          "status": "Accepted"
+        }
+      }
+    ],
+    "retry_response": [
+      3,
+      "msg-0002",
+      {
+        "idTagInfo": {
+          "status": "Accepted"
+        }
+      }
+    ],
+    "tamper_response": [
+      4,
+      "wire-tamper",
+      "SecurityError",
+      "BAD_TAG",
+      {}
+    ],
+    "ledger_rows": 1,
+    "billed_paise": 15000
+  },
+  "claims": {
+    "new_cryptographic_primitive": false,
+    "new_collision_generated": false,
+    "real_vendor_vulnerability_discovered": false,
+    "raspberry_pi_measured": false,
+    "schema_valid_ocpp": true,
+    "whole_json_collision": false
+  }
+}

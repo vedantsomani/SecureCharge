@@ -1,0 +1,505 @@
+{
+  "artifact_version": "SC2-research-1",
+  "seed": 18,
+  "environment": {
+    "measured_at_utc": "2026-10-03T00:04:50.443713+00:00",
+    "python": "3.14.7",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 204 Stepping 2, GenuineIntel",
+    "board_model": "unavailable",
+    "openssl": "OpenSSL 3.5.7 9 Jun 2026",
+    "packages": {
+      "ocpp": "2.1.0",
+      "jsonschema": "4.25.1",
+      "websockets": "15.0.1"
+    },
+    "hardware_class": "host-desktop-or-server"
+  },
+  "methods": {
+    "samples": 200,
+    "warmup": 20,
+    "hash_batch_size": 50,
+    "bootstrap_resamples": 1000,
+    "ci": "percentile bootstrap of median; not an independent-host confidence interval",
+    "pipeline_storage": "SQLite WAL file",
+    "latency_scope": "StartTransaction: modeled checksum + gateway + wire encoding + backend/DB; Stop closes outside timer",
+    "allocation_scope": "one extra start+stop; Python allocations only, not RSS or embedded flash"
+  },
+  "hash_summary": [
+    {
+      "algorithm": "MD5",
+      "size_bytes": 256,
+      "n": 200,
+      "median_ns": 682.0,
+      "p95_ns": 1140.0,
+      "p99_ns": 2896.0,
+      "median_ci95_ns": [
+        676.0,
+        690.0
+      ],
+      "min_ns": 606.0,
+      "max_ns": 4910.0
+    },
+    {
+      "algorithm": "SHA-1",
+      "size_bytes": 256,
+      "n": 200,
+      "median_ns": 512.0,
+      "p95_ns": 796.0,
+      "p99_ns": 966.0,
+      "median_ci95_ns": [
+        506.0,
+        516.0
+      ],
+      "min_ns": 452.0,
+      "max_ns": 1160.0
+    },
+    {
+      "algorithm": "SHA-256",
+      "size_bytes": 256,
+      "n": 200,
+      "median_ns": 408.0,
+      "p95_ns": 686.0,
+      "p99_ns": 878.0,
+      "median_ci95_ns": [
+        402.0,
+        410.0
+      ],
+      "min_ns": 356.0,
+      "max_ns": 1434.0
+    },
+    {
+      "algorithm": "SHA-512",
+      "size_bytes": 256,
+      "n": 200,
+      "median_ns": 722.0,
+      "p95_ns": 1270.0,
+      "p99_ns": 2102.0,
+      "median_ci95_ns": [
+        718.0,
+        728.0
+      ],
+      "min_ns": 650.0,
+      "max_ns": 2218.0
+    },
+    {
+      "algorithm": "SHA3-256",
+      "size_bytes": 256,
+      "n": 200,
+      "median_ns": 762.0,
+      "p95_ns": 1292.0,
+      "p99_ns": 1738.0,
+      "median_ci95_ns": [
+        757.0,
+        766.0
+      ],
+      "min_ns": 674.0,
+      "max_ns": 2840.0
+    },
+    {
+      "algorithm": "HMAC-SHA-256",
+      "size_bytes": 256,
+      "n": 200,
+      "median_ns": 1370.0,
+      "p95_ns": 2416.0,
+      "p99_ns": 2608.0,
+      "median_ci95_ns": [
+        1360.0,
+        1386.0
+      ],
+      "min_ns": 1240.0,
+      "max_ns": 3550.0
+    },
+    {
+      "algorithm": "HMAC-SHA3-256",
+      "size_bytes": 256,
+      "n": 200,
+      "median_ns": 2311.0,
+      "p95_ns": 3452.0,
+      "p99_ns": 3966.0,
+      "median_ci95_ns": [
+        2288.0,
+        2332.0
+      ],
+      "min_ns": 2068.0,
+      "max_ns": 8602.0
+    },
+    {
+      "algorithm": "MD5",
+      "size_bytes": 4096,
+      "n": 200,
+      "median_ns": 4815.0,
+      "p95_ns": 7530.0,
+      "p99_ns": 8734.0,
+      "median_ci95_ns": [
+        4762.0,
+        4876.0
+      ],
+      "min_ns": 4376.0,
+      "max_ns": 10668.0
+    },
+    {
+      "algorithm": "SHA-1",
+      "size_bytes": 4096,
+      "n": 200,
+      "median_ns": 2374.0,
+      "p95_ns": 2924.0,
+      "p99_ns": 4044.0,
+      "median_ci95_ns": [
+        2362.0,
+        2384.0
+      ],
+      "min_ns": 2130.0,
+      "max_ns": 5254.0
+    },
+    {
+      "algorithm": "SHA-256",
+      "size_bytes": 4096,
+      "n": 200,
+      "median_ns": 1402.0,
+      "p95_ns": 2054.0,
+      "p99_ns": 3492.0,
+      "median_ci95_ns": [
+        1397.0,
+        1415.0
+      ],
+      "min_ns": 1280.0,
+      "max_ns": 4044.0
+    },
+    {
+      "algorithm": "SHA-512",
+      "size_bytes": 4096,
+      "n": 200,
+      "median_ns": 4461.0,
+      "p95_ns": 5960.0,
+      "p99_ns": 6538.0,
+      "median_ci95_ns": [
+        4434.0,
+        4484.0
+      ],
+      "min_ns": 4018.0,
+      "max_ns": 6930.0
+    },
+    {
+      "algorithm": "SHA3-256",
+      "size_bytes": 4096,
+      "n": 200,
+      "median_ns": 6497.0,
+      "p95_ns": 9138.0,
+      "p99_ns": 10288.0,
+      "median_ci95_ns": [
+        6460.0,
+        6562.0
+      ],
+      "min_ns": 5836.0,
+      "max_ns": 14160.0
+    },
+    {
+      "algorithm": "HMAC-SHA-256",
+      "size_bytes": 4096,
+      "n": 200,
+      "median_ns": 2340.0,
+      "p95_ns": 3734.0,
+      "p99_ns": 5024.0,
+      "median_ci95_ns": [
+        2320.0,
+        2384.0
+      ],
+      "min_ns": 2112.0,
+      "max_ns": 6318.0
+    },
+    {
+      "algorithm": "HMAC-SHA3-256",
+      "size_bytes": 4096,
+      "n": 200,
+      "median_ns": 8041.0,
+      "p95_ns": 11770.0,
+      "p99_ns": 14504.0,
+      "median_ci95_ns": [
+        7988.0,
+        8096.0
+      ],
+      "min_ns": 7256.0,
+      "max_ns": 17858.0
+    },
+    {
+      "algorithm": "MD5",
+      "size_bytes": 65536,
+      "n": 200,
+      "median_ns": 75996.0,
+      "p95_ns": 94608.0,
+      "p99_ns": 96554.0,
+      "median_ci95_ns": [
+        72659.0,
+        81927.0
+      ],
+      "min_ns": 64096.0,
+      "max_ns": 97910.0
+    },
+    {
+      "algorithm": "SHA-1",
+      "size_bytes": 65536,
+      "n": 200,
+      "median_ns": 30133.0,
+      "p95_ns": 34892.0,
+      "p99_ns": 37938.0,
+      "median_ci95_ns": [
+        29228.0,
+        30526.0
+      ],
+      "min_ns": 24638.0,
+      "max_ns": 38736.0
+    },
+    {
+      "algorithm": "SHA-256",
+      "size_bytes": 65536,
+      "n": 200,
+      "median_ns": 17798.0,
+      "p95_ns": 23086.0,
+      "p99_ns": 25336.0,
+      "median_ci95_ns": [
+        17120.0,
+        21484.0
+      ],
+      "min_ns": 15290.0,
+      "max_ns": 26124.0
+    },
+    {
+      "algorithm": "SHA-512",
+      "size_bytes": 65536,
+      "n": 200,
+      "median_ns": 67654.0,
+      "p95_ns": 82386.0,
+      "p99_ns": 83822.0,
+      "median_ci95_ns": [
+        65221.0,
+        73998.0
+      ],
+      "min_ns": 57448.0,
+      "max_ns": 87110.0
+    },
+    {
+      "algorithm": "SHA3-256",
+      "size_bytes": 65536,
+      "n": 200,
+      "median_ns": 102398.0,
+      "p95_ns": 131112.0,
+      "p99_ns": 133778.0,
+      "median_ci95_ns": [
+        96925.0,
+        108604.0
+      ],
+      "min_ns": 87676.0,
+      "max_ns": 138646.0
+    },
+    {
+      "algorithm": "HMAC-SHA-256",
+      "size_bytes": 65536,
+      "n": 200,
+      "median_ns": 19381.0,
+      "p95_ns": 24576.0,
+      "p99_ns": 27226.0,
+      "median_ci95_ns": [
+        18562.0,
+        22179.0
+      ],
+      "min_ns": 16134.0,
+      "max_ns": 28024.0
+    },
+    {
+      "algorithm": "HMAC-SHA3-256",
+      "size_bytes": 65536,
+      "n": 200,
+      "median_ns": 105690.0,
+      "p95_ns": 133808.0,
+      "p99_ns": 139652.0,
+      "median_ci95_ns": [
+        100964.0,
+        115454.0
+      ],
+      "min_ns": 89246.0,
+      "max_ns": 141134.0
+    }
+  ],
+  "pipeline_summary": {
+    "legacy_checksum_ns": {
+      "n": 200,
+      "median_ns": 41900.0,
+      "p95_ns": 53300,
+      "p99_ns": 60400,
+      "median_ci95_ns": [
+        41300.0,
+        42450.0
+      ],
+      "min_ns": 28300,
+      "max_ns": 100200
+    },
+    "gateway_ns": {
+      "n": 200,
+      "median_ns": 190750.0,
+      "p95_ns": 232000,
+      "p99_ns": 335000,
+      "median_ci95_ns": [
+        186350.0,
+        194500.0
+      ],
+      "min_ns": 127000,
+      "max_ns": 352400
+    },
+    "wire_encoding_ns": {
+      "n": 200,
+      "median_ns": 57950.0,
+      "p95_ns": 62900,
+      "p99_ns": 67900,
+      "median_ci95_ns": [
+        57550.0,
+        58550.0
+      ],
+      "min_ns": 40600,
+      "max_ns": 83200
+    },
+    "backend_ns": {
+      "n": 200,
+      "median_ns": 1456900.0,
+      "p95_ns": 1820700,
+      "p99_ns": 2408700,
+      "median_ci95_ns": [
+        1425800.0,
+        1479700.0
+      ],
+      "min_ns": 1139100,
+      "max_ns": 9050200
+    },
+    "total_ns": {
+      "n": 200,
+      "median_ns": 1748600.0,
+      "p95_ns": 2149100,
+      "p99_ns": 2725300,
+      "median_ci95_ns": [
+        1719100.0,
+        1784300.0
+      ],
+      "min_ns": 1378100,
+      "max_ns": 9327300
+    }
+  },
+  "message_overhead_bytes": 282,
+  "python_allocation_peak_bytes": 11390,
+  "collision": {
+    "model": "MVR-128 research fixture; no real vendor firmware claim",
+    "hashing_boundary": "base64-decoded 128-byte vendor meter record ONLY",
+    "pinned_md5": "79054025255fb1a26e4bc422aef54eb4",
+    "honest_meter_stop": 801813895,
+    "substituted_meter_stop": 801813767,
+    "meter_start": 801801395,
+    "honest_bill_paise": 15000,
+    "substituted_bill_paise": 14846,
+    "legacy_accepts_both": true,
+    "full_json_md5_equal": false,
+    "sha256_record_equal": false,
+    "sha3_record_equal": false,
+    "secure_substitution_reason": "BAD_TAG",
+    "honest_ocpp": [
+      2,
+      "collision-stop",
+      "StopTransaction",
+      {
+        "transactionId": 1,
+        "idTag": "RFID-1234",
+        "meterStop": 801813895,
+        "timestamp": "2026-09-21T14:28:20Z",
+        "reason": "Local",
+        "transactionData": [
+          {
+            "timestamp": "2026-09-21T14:28:20Z",
+            "sampledValue": [
+              {
+                "value": "0THdAsXm7sRpPZoGmK/5XC/KtYcSRn6rQARYPrj7f4lVrTQGCfSzAoPkiIMlcUFaCFEl6PfNyZ/ZHb3ygDc8W9iCPjFWNI9brm2s1DbJGcbdU+K0h9oD/QI5YwbSSM2g6Z8zQg9XfujOVLZwgKgNHsaYIby2qIOTlvllK2/3KnA=",
+                "format": "SignedData",
+                "measurand": "Energy.Active.Import.Register",
+                "unit": "Wh"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "substituted_ocpp": [
+      2,
+      "collision-stop",
+      "StopTransaction",
+      {
+        "transactionId": 1,
+        "idTag": "RFID-1234",
+        "meterStop": 801813767,
+        "timestamp": "2026-09-21T14:28:20Z",
+        "reason": "Local",
+        "transactionData": [
+          {
+            "timestamp": "2026-09-21T14:28:20Z",
+            "sampledValue": [
+              {
+                "value": "0THdAsXm7sRpPZoGmK/5XC/KtQcSRn6rQARYPrj7f4lVrTQGCfSzAoPkiIMl8UFaCFEl6PfNyZ/ZHb1ygDc8W9iCPjFWNI9brm2s1DbJGcbdU+I0h9oD/QI5YwbSSM2g6Z8zQg9XfujOVLZwgCgNHsaYIby2qIOTlvllq2/3KnA=",
+                "format": "SignedData",
+                "measurand": "Energy.Active.Import.Register",
+                "unit": "Wh"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "network": {
+    "transport": "actual localhost WebSockets",
+    "frontend_subprotocol": "ocpp1.6",
+    "private_subprotocol": "securecharge.sc2",
+    "tls": false,
+    "start_response": [
+      3,
+      "msg-0001",
+      {
+        "idTagInfo": {
+          "status": "Accepted"
+        },
+        "transactionId": 1
+      }
+    ],
+    "stop_response": [
+      3,
+      "msg-0002",
+      {
+        "idTagInfo": {
+          "status": "Accepted"
+        }
+      }
+    ],
+    "retry_response": [
+      3,
+      "msg-0002",
+      {
+        "idTagInfo": {
+          "status": "Accepted"
+        }
+      }
+    ],
+    "tamper_response": [
+      4,
+      "wire-tamper",
+      "SecurityError",
+      "BAD_TAG",
+      {}
+    ],
+    "ledger_rows": 1,
+    "billed_paise": 15000
+  },
+  "claims": {
+    "new_cryptographic_primitive": false,
+    "new_collision_generated": false,
+    "real_vendor_vulnerability_discovered": false,
+    "raspberry_pi_measured": false,
+    "schema_valid_ocpp": true,
+    "whole_json_collision": false
+  }
+}

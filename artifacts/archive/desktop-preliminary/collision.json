@@ -1,0 +1,65 @@
+{
+  "model": "MVR-128 research fixture; no real vendor firmware claim",
+  "hashing_boundary": "base64-decoded 128-byte vendor meter record ONLY",
+  "pinned_md5": "79054025255fb1a26e4bc422aef54eb4",
+  "honest_meter_stop": 801813895,
+  "substituted_meter_stop": 801813767,
+  "meter_start": 801801395,
+  "honest_bill_paise": 15000,
+  "substituted_bill_paise": 14846,
+  "legacy_accepts_both": true,
+  "full_json_md5_equal": false,
+  "sha256_record_equal": false,
+  "sha3_record_equal": false,
+  "secure_substitution_reason": "BAD_TAG",
+  "honest_ocpp": [
+    2,
+    "collision-stop",
+    "StopTransaction",
+    {
+      "transactionId": 1,
+      "idTag": "RFID-1234",
+      "meterStop": 801813895,
+      "timestamp": "2026-09-21T14:28:20Z",
+      "reason": "Local",
+      "transactionData": [
+        {
+          "timestamp": "2026-09-21T14:28:20Z",
+          "sampledValue": [
+            {
+              "value": "0THdAsXm7sRpPZoGmK/5XC/KtYcSRn6rQARYPrj7f4lVrTQGCfSzAoPkiIMlcUFaCFEl6PfNyZ/ZHb3ygDc8W9iCPjFWNI9brm2s1DbJGcbdU+K0h9oD/QI5YwbSSM2g6Z8zQg9XfujOVLZwgKgNHsaYIby2qIOTlvllK2/3KnA=",
+              "format": "SignedData",
+              "measurand": "Energy.Active.Import.Register",
+              "unit": "Wh"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "substituted_ocpp": [
+    2,
+    "collision-stop",
+    "StopTransaction",
+    {
+      "transactionId": 1,
+      "idTag": "RFID-1234",
+      "meterStop": 801813767,
+      "timestamp": "2026-09-21T14:28:20Z",
+      "reason": "Local",
+      "transactionData": [
+        {
+          "timestamp": "2026-09-21T14:28:20Z",
+          "sampledValue": [
+            {
+              "value": "0THdAsXm7sRpPZoGmK/5XC/KtQcSRn6rQARYPrj7f4lVrTQGCfSzAoPkiIMl8UFaCFEl6PfNyZ/ZHb1ygDc8W9iCPjFWNI9brm2s1DbJGcbdU+I0h9oD/QI5YwbSSM2g6Z8zQg9XfujOVLZwgCgNHsaYIby2qIOTlvllq2/3KnA=",
+              "format": "SignedData",
+              "measurand": "Energy.Active.Import.Register",
+              "unit": "Wh"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

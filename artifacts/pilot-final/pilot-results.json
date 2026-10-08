@@ -1,0 +1,45 @@
+{
+  "transport": "actual localhost mutual-TLS WebSockets; private temporary CA",
+  "hardware": "recorded execution host; no physical charger or physical power-cut measurement",
+  "outage_retains_pending_without_success_ack": true,
+  "backend_bill_committed_before_lost_reply": 1,
+  "pending_after_lost_reply": 1,
+  "restart_recovered_authenticated_receipt": true,
+  "retry_uses_same_cached_response": true,
+  "ledger_rows_after_recovery": 1,
+  "journal_events": 4,
+  "external_anchor_verified": true,
+  "tampered_custody_record_rejected_at_startup": true,
+  "limitations": [
+    "software-held symmetric keys",
+    "full journal rollback needs independently retained anchor",
+    "restart is journal close/reopen; separate regression test exercises abrupt process exit",
+    "no offline authorization or invented transaction ID",
+    "not OCPP certification"
+  ],
+  "environment": {
+    "measured_at_utc": "2026-10-03T02:44:31.373420+00:00",
+    "python": "3.14.7",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 204 Stepping 2, GenuineIntel",
+    "board_model": "unavailable",
+    "openssl": "OpenSSL 3.5.7 9 Jun 2026",
+    "sqlite": "3.50.4",
+    "packages": {
+      "ocpp": "2.1.0",
+      "jsonschema": "4.25.1",
+      "websockets": "15.0.1",
+      "cryptography": "48.0.1",
+      "matplotlib": "3.11.2",
+      "numpy": "2.5.3",
+      "streamlit": "1.65.0",
+      "pandas": "2.3.3",
+      "pytest": "9.1.1",
+      "hypothesis": "6.168.3",
+      "reportlab": "5.0.1",
+      "pymupdf": "1.28.2"
+    },
+    "hardware_class": "host-desktop-or-server"
+  }
+}

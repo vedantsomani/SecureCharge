@@ -1,0 +1,5 @@
+-r requirements.txt
+pytest>=8,<10
+hypothesis>=6,<7
+ruff>=0.13,<1
+cryptography>=46,<49
